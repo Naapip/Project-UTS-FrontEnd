@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast</title>
+    <link rel="stylesheet" href="PODCASTstyle.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">GenZ Upgrade</a>
+        
+        <nav class="navbar">
+            <a id="homeLink" href="#home" class="active">Home</a>
+            <div class="dropdown">
+                <a href="#selfhelp" class="dropbtn">Self Help &#9662;</a>
+                <div class="dropdown-content">
+                    <a id="selfDevLink" href="#self-development">Self Development</a>
+                    <a id="produLink" href="#productivity">Productivity</a>
+                    <a id="menHeLink" href="#mental-health">Mental Health</a>
+                </div>
+            </div>
+            <a id="podcastLink" href="#podcast">Podcast</a>
+            <a id="bookLink" href="#book">Read a Book</a>
+        </nav>        
+    </header>
+
+
+    <section class="posts-artikel">
+        <h1>woiiii</h1>
+        <div class="post-artikel">
+            <h1>
+                bla blas
+            </h1>
+
+        </div>
+    </section>
+
+    <section class="posts-section">
+        <h1>Menampilkan beberapa rekomendasi podcast tentang</h1>
+        <h1><strong>"Self Development, Productivity, Mental Health"</strong></h1>
+
+        <!-- Input pencarian -->
+            <input type="text" id="searchInput" placeholder="Cari podcast..." oninput="filterPosts()">
+
+        <div class="posts-grid">
+            <div class="post-card">
+                <img src="assets/podcast1.png" alt="Post 1">
+                <span class="category">Mental Health</span>
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/q5x1SNjRQwY?si=QRebdl9qFO36qv6s" target="_blank">Buat yang Lagi Stress..</a></h2>
+                    <p class="post-date">Juli 22, 2024</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/podcast2.png" alt="Post 2">
+                <span class="category">Mental Health</span>
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/pQnejArI-oA?si=zvjsrAXAifcNhbhz" target="_blank">#UGMPodcast - Mental Health di Kalangan Milenial</a></h2>
+                    <p class="post-date">Februari 12, 2020</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/podcast3.png" alt="Post 3">
+                <span class="category">Self Development</span>
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/zckqurf5KX8?si=lMdeI4X7xoUyMu2O" target="_blank">Self Development (cara untuk meningkatkan kualitas diri)</a></h2>
+                    <p class="post-date">Oktober 21, 2022</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/podcast4.png" alt="Post 4">
+                <span class="category">Productivity</span>
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/uqGf4PWDOUw?si=XNiNpsV_sR7gd6xv" target="_blank">Tips DISIPLIN membangun KEBIASAAN! 💪🏻 Maudy Ayunda's Booklist</a></h2>
+                    <p class="post-date">Mei 19, 2022</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/podcast5.png" alt="Post 5">
+                <span class="category">Productivity</span>
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/p4ZfkezDTXQ?si=s1TBxsqmew0JgaKd" target="_blank">Dr. Cal Newport: How to Enhance Focus and Improve Productivity</a></h2>
+                    <p class="post-date">Maret 11, 2024</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/podcast6.png" alt="Post 6">
+                <span class="category">Self Development</span>
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/dAI12OGD04A?si=5ry0xELDcntYZbQE" target="_blank">Kunci dari Kebahagiaan = Bersikap Bodo Amat?! Maudy Ayunda's Booklist</a></h2>
+                    <p class="post-date">Juni 8, 2023</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/podcast7.png" alt="Post 7">
+                <span class="category">Mental Health</span>
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/xjEFo3a1AnI?si=dY_u9OJomjaFhx7z" target="_blank">Dr. Chris Palmer: Diet & Nutrition for Mental Health</a></h2>
+                    <p class="post-date">November 21, 2022</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/podcast8.png" alt="Post 8">
+                <span class="category">Productivity</span>
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/mtGsJ1GTFB4?si=td8002zq8-0Gr4uA" target="_blank">INSTANTLY BOOST Energy & Focus To Become A PRODUCTIVITY MASTER | Andrew Huberman & Jay Shetty</a></h2>
+                    <p class="post-date">Mei 2, 2022</p>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 GenZ Upgrade. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+    function filterPosts() {
+    // Ambil input pencarian
+    var input = document.getElementById('searchInput').value.toLowerCase();
+    // Ambil semua elemen post-card
+    var cards = document.getElementsByClassName('post-card');
+
+    // Loop melalui semua artikel dan sembunyikan yang tidak cocok dengan pencarian
+    for (var i = 0; i < cards.length; i++) {
+        var title = cards[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+        var categoryElem = cards[i].getElementsByClassName('category')[0];  // Ambil elemen kategori jika ada
+        var category = categoryElem ? categoryElem.innerText.toLowerCase() : ""; // Jika elemen kategori ada, ambil teksnya, jika tidak ada biarkan string kosong
+
+        // Tampilkan atau sembunyikan artikel berdasarkan judul atau kategori
+        if (title.includes(input) || category.includes(input)) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+    </script>
+</body>
+</html>
