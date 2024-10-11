@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="BOOKstyle.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">GenZ Upgrade</a>
+        
+        <nav class="navbar">
+            <a id="homeLink" href="#home" class="active">Home</a>
+            <div class="dropdown">
+                <a href="#selfhelp" class="dropbtn">Self Help &#9662;</a>
+                <div class="dropdown-content">
+                    <a id="selfDevLink" href="#self-development">Self Development</a>
+                    <a id="produLink" href="#productivity">Productivity</a>
+                    <a id="menHeLink" href="#mental-health">Mental Health</a>
+                </div>
+            </div>
+            <a id="podcastLink" href="#podcast">Podcast</a>
+            <a id="bookLink" href="#book">Read a Book</a>
+        </nav>        
+    </header>
+
+    <section class="posts-section">
+        <div class="">
+            <h1>Read A Book</h1>
+            <p>Read A Book ini sebagai sarana untuk menjalankan Productivity memudahkan kita belajar dan membaca secara gratis selain itu, lebih praktis juga untuk dibawa kemana-mana karna kita hanya melihat melalui handphone, tablet atau komputer.</p>
+            <p>Berikut dibawah ini adalah beberapa artikel E-Book yang telah kita sarankan untuk kalian membaca!</p>
+        </div>
+        <div>
+            <h1>Menampilkan beberapa rekomendasi Artikel tentang<strong>"Read A Book"</strong></h1>
+        </div>
+
+        <!-- Input pencarian -->
+        <input type="text" id="searchInput" placeholder="Cari artikel..." oninput="filterPosts()">
+
+        <div class="posts-grid">
+            <div class="post-card">
+                <img src="assets/Book1.jpg" alt="Post 1">
+                <div class="post-content">
+                    <h2><a href="https://bookauthority.org/books/best-productivity-ebooks" target="_blank">20 Best Productivity eBooks of All Time</a></h2>
+                    <p class="post-date">2024</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/Book2.jpg" alt="Post 2">
+                <div class="post-content">
+                    <h2><a href="https://www.wrike.com/ebook-25-must-know-productivity-tips/" target="_blank">eBooks 25 Tips Productivity</a></h2>
+                    <p class="post-date">2024</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/Book3.jpg" alt="Post 3">
+                <div class="post-content">
+                    <h2><a href="https://www.webfx.com/blog/web-design/free-productivity-books/" target="_blank">Free Productivity Books</a></h2>
+                    <p class="post-date">2024</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/Book4.jpg" alt="Post 4">
+                <div class="post-content">
+                    <h2><a href="https://clickup.com/blog/productivity-books/?utm_source=google-pmax&utm_medium=cpc&utm_campaign=gpm_cpc_arlv_nnc_pro_trial_all-devices_tcpa_lp_x_all-departments_x_pmax&utm_content=&utm_creative=_____&gad_source=1&gclid=CjwKCAjw9p24BhB_EiwA8ID5BlgxAYiQ28-OmOEKjYt1twOeFJUrJe_02F1en2x5D9znijneHP7nvRoC4NwQAvD_BwE" target="_blank">Top 10 Productivity Books can Transform Your Work in 2024</a></h2>
+                    <p class="post-date">2024</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/Book5.jpg" alt="Post 5">
+                <div class="post-content">
+                    <h2><a href="https://z-lib.id/categories/productivity" target="_blank">Best Productivity Books</a></h2>
+                    <p class="post-date">2024</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/Book6.jpg" alt="Post 6">
+                <div class="post-content">
+                    <h2><a href="https://produktivitas.kemnaker.go.id/e-library/" target="_blank">Produktivitas Kemnaker</a></h2>
+                    <p class="post-date">2024</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/Book7.jpg" alt="Post 7">
+                <div class="post-content">
+                    <h2><a href="https://pembelajarproduktif.com/e-library/?__im-wjwSGRfg=640862995024220528" target="_blank">Pembelajaran Produktif</a></h2>
+                    <p class="post-date">2024</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/Book8.jpg" alt="Post 8">
+                <div class="post-content">
+                    <h2><a href="https://divapress-online.com/book/maximum-personal-productivity" target="_blank">Maximum Personal Productivity</a></h2>
+                    <p class="post-date">2024</p>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 GenZ Upgrade. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+    function filterPosts() {
+    // Ambil input pencarian
+    var input = document.getElementById('searchInput').value.toLowerCase();
+    // Ambil semua elemen post-card
+    var cards = document.getElementsByClassName('post-card');
+
+    // Loop melalui semua artikel dan sembunyikan yang tidak cocok dengan pencarian
+    for (var i = 0; i < cards.length; i++) {
+        var title = cards[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+        var categoryElem = cards[i].getElementsByClassName('category')[0];  // Ambil elemen kategori jika ada
+        var category = categoryElem ? categoryElem.innerText.toLowerCase() : ""; // Jika elemen kategori ada, ambil teksnya, jika tidak ada biarkan string kosong
+
+        // Tampilkan atau sembunyikan artikel berdasarkan judul atau kategori
+        if (title.includes(input) || category.includes(input)) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+    </script>
+</body>
+</html>
