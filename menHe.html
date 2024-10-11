@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health</title>
+    <link rel="stylesheet" href="MENHEstyle.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">GenZ Upgrade</a>
+        
+        <nav class="navbar">
+            <a id="homeLink" href="#home" class="active">Home</a>
+            <div class="dropdown">
+                <a href="#selfhelp" class="dropbtn">Self Help &#9662;</a>
+                <div class="dropdown-content">
+                    <a id="selfDevLink" href="#self-development">Self Development</a>
+                    <a id="produLink" href="#productivity">Productivity</a>
+                    <a id="menHeLink" href="#mental-health">Mental Health</a>
+                </div>
+            </div>
+            <a id="podcastLink" href="#podcast">Podcast</a>
+            <a id="bookLink" href="#book">Read a Book</a>
+        </nav>        
+    </header>
+
+    <section class="posts-section">
+        <div class="">
+            <h1>Apa Itu Mental Health</h1>
+            <p>Kesehatan Mental (Mental Health) adalah kondisi di mana seseorang dapat mengelola emosi, menjalani aktivitas sehari-hari dengan baik, dan berinteraksi secara positif dengan lingkungan sekitarnya. Kesehatan mental mencakup kesejahteraan emosional, psikologis, dan sosial seseorang. Hal ini memengaruhi cara seseorang berpikir, merasa, dan bertindak dalam menghadapi hidup.</p>
+            <h1>Apakah penting menjaga Kesehatan Mental?</h1>
+            <p>Tentu saja penting karena Ketika kesehatan mental terjaga, seseorang lebih mampu menghadapi stres, menjaga hubungan yang sehat, dan membuat keputusan yang baik dalam kehidupannya. Sebaliknya, masalah kesehatan mental yang tidak ditangani dapat berdampak buruk pada kualitas hidup, termasuk menurunnya produktivitas dan hubungan sosial.</p>
+            <h1>Hal-Hal yang mempengaruhi Mental Health</h1>
+            <h1>1. Pengalaman Masa Kecil</h1>
+            <p>Pengalaman traumatis di masa kecil, seperti kekerasan fisik, pelecehan, pengabaian, atau kehilangan orang tua, dapat meninggalkan dampak jangka panjang pada kesehatan mental</p>
+            <h1>2. Stress dan Tekanan Hidup</h1>
+            <p>Tekanan hidup sehari-hari, seperti pekerjaan yang menuntut, masalah keuangan, atau hubungan yang bermasalah, dapat meningkatkan stres. Jika tidak dikelola dengan baik, stres kronis dapat menyebabkan gangguan kecemasan, depresi, atau kelelahan mental</p>
+            <h1>3. Lingkungan Sosial</h1>
+            <p>Lingkungan sosial, termasuk hubungan interpersonal, komunitas, dan dukungan sosial, sangat memengaruhi kesehatan mental.</p>
+            <h1>4. Perubahan Hidup Yang Signifikan</h1>
+            <p>Peristiwa kehidupan yang besar, baik positif maupun negatif, seperti pernikahan, kehilangan pekerjaan, atau kematian orang terdekat, dapat memicu stres emosional dan berdampak pada kesehatan mental.</p>
+            <h1>5. Kualitas Tidur</h1>
+            <p>Kualitas dan kuantitas tidur yang buruk dapat mempengaruhi kesehatan mental. Kurang tidur atau gangguan tidur yang berkelanjutan dapat meningkatkan risiko gangguan mental, seperti kecemasan, depresi, dan gangguan suasana hati.</p>
+            <h1>6. Pengaruh Media Sosial</h1>
+            <p>Penggunaan media sosial yang berlebihan bisa berdampak negatif pada kesehatan mental. Tekanan sosial, perbandingan dengan orang lain, serta cyberbullying dapat memicu rasa cemas, depresi, dan rendah diri.</p>
+        </div>
+        
+        <div class="filter">
+            <div>
+             <h1>Menampilkan beberapa rekomendasi artikel tentang <strong>"Mental Health"</strong></h1>
+            </div>
+        
+            <!-- Input pencarian -->
+            <input type="text" id="searchInput" placeholder="Cari artikel..." oninput="filterPosts()">
+        </div>
+
+        <div class="posts-grid">
+            <div class="post-card">
+                <img src="assets/menhe1.jpg" alt="Post 1">
+                <div class="post-content">
+                    <h2><a href="https://ayosehat.kemkes.go.id/pengertian-kesehatan-mental" target="_blank">Jenis Masalah Kesehatan Mental</a></h2>
+                    <p class="post-date">8 Juni, 2018</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/menhe2.jpg" alt="Post 2">  
+                <div class="post-content">
+                    <h2><a href="https://www.unicef.org/indonesia/id/kesehatan-mental" target="_blank">Kesehatan Mental Dan Kesejahteraan Hidup</a></h2>
+                    <p class="post-date">1 Mei, 2024</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/menhe3.jpeg" alt="Post 3">
+                <div class="post-content">
+                    <h2><a href="https://tirto.id/info-data-kesehatan-mental-masyarakat-indonesia-tahun-2023-gQRT#google_vignette" target="_blank">Data Kesehatan Mental Masyarakat Indonesia</a></h2>
+                    <p class="post-date">10 October, 2023</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/menhe4.jpg" alt="Post 4">
+                <div class="post-content">
+                    <h2><a href="https://www.halodoc.com/kesehatan/kesehatan-mental" target="_blank">Menghadapi Kesehatan Mental Menurut Halodoc</a></h2>
+                    <p class="post-date">2024</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/menhe5.jpg" alt="Post 4">
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/pQnejArI-oA?si=O5H0DYZEfSwpagvr" target="_blank">Mental Health Di Kalangan Milenial</a></h2>
+                    <p class="post-date">12 Februari, 2020</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/menhe6.jpg" alt="Post 4">
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/S7sv5U38c_0?si=IHuIXhG6mg8hSREU" target="_blank">Penyakit Kejiwaan Dari Dr.Tirta</a></h2>
+                    <p class="post-date">9 Oktober, 2021</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/menhe7.jpg" alt="Post 4">
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/NS29-rWxQx8?si=7Rmwg5j33YPYls-a" target="_blank">Mau Sampai Kapan?</a></h2>
+                    <p class="post-date">15 Januari, 2023</p>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="assets/menhe8.png" alt="Post 4">
+                <div class="post-content">
+                    <h2><a href="https://youtu.be/FPy-gq2IZE4?si=yZxonF4cDX9sH3Dy" target="_blank">Apakah Sebegitu Penting?</a></h2>
+                    <p class="post-date">10 Januari, 2023</p>
+            
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 GenZ Upgrade. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+    function filterPosts() {
+    // Ambil input pencarian
+    var input = document.getElementById('searchInput').value.toLowerCase();
+    // Ambil semua elemen post-card
+    var cards = document.getElementsByClassName('post-card');
+
+    // Loop melalui semua artikel dan sembunyikan yang tidak cocok dengan pencarian
+    for (var i = 0; i < cards.length; i++) {
+        var title = cards[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+        var categoryElem = cards[i].getElementsByClassName('category')[0];  // Ambil elemen kategori jika ada
+        var category = categoryElem ? categoryElem.innerText.toLowerCase() : ""; // Jika elemen kategori ada, ambil teksnya, jika tidak ada biarkan string kosong
+
+        // Tampilkan atau sembunyikan artikel berdasarkan judul atau kategori
+        if (title.includes(input) || category.includes(input)) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+    </script>
+</body>
+</html>
